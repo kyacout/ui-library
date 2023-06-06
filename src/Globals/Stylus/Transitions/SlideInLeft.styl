@@ -1,0 +1,25 @@
+$menu_transition_time = 0.15s
+
+.enter
+  transform: translateX(-610px);
+  +below($desktop)
+    transform: translateX(-330px);    
+
+.enterActive
+  transform: translateX(0px);
+  transition: transform $menu_transition_time cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+.exit
+  transform: translateX(0px);
+
+.exitActive
+  transform: translateX(-610px);
+  transition: transform $menu_transition_time cubic-bezier(0.55, 0.085, 0.68, 0.53)
+  +below($desktop)
+    transform: translateX(-330px);
+
+.exitActiveWithDelay
+  transform: translateX(-610px);
+  transition: transform $menu_transition_time cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.1s
+  +below($desktop)
+    transform: translateX(-330px);

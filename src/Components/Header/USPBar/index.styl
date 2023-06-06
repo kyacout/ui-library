@@ -1,0 +1,127 @@
+.root
+  section-outer()
+  background-color $color_grey_dark    
+
+.inner
+  position relative
+  section-inner()
+  height 30px
+
+.item
+  position absolute
+  top 0
+  width 50%
+  display flex
+  align-items center
+  height 100%
+  a
+  span
+  strong
+    font-size 12px
+    color #fff
+    +below($wide)
+      font-size 11px
+  strong
+    font-weight normal
+    &:after
+      content '-'
+      display inline-block
+      font-size 12px
+      color #fff
+      padding-left 5px
+      padding-right 1px
+  &.firstItem
+    left 0
+    z-index 1
+    +below($desktop)
+      display none
+      padding 0 5px
+  &.middleItem
+    left 25%
+    z-index 3
+    justify-content center
+    +below($desktop)
+      width 100%
+      left 0
+  &.lastItem
+    right 0
+    z-index 2
+    justify-content flex-end
+    +below($desktop)
+      display none
+
+.evenSpacingOnSmallDesktop
+  +between($desktop, $wide)
+    .inner
+      display flex
+      justify-content space-between
+    .item
+      position relative
+      width auto
+      width none
+      &.firstItem
+        left inherit
+      &.middleItem
+        left inherit
+      &.lastItem
+        right inherit
+
+.smallTextOnSmallDesktop
+  .item
+    +below($wide)
+      a
+      span
+      strong
+        font-size 10px
+
+.smallTextBelowPhabletA
+  +below($phablet)
+    .item
+      a
+      span
+      strong
+        font-size 11px
+    +below($mobile)
+      a
+      span
+      strong
+        font-size 10px
+
+.smallTextBelowPhoneA
+  +below($mobile)
+    a
+    span
+    strong
+      font-size 9px
+
+.smallTextBelowPhabletB
+  +below($phablet)
+    .item
+      a
+      span
+      strong
+        font-size 9px
+    +below($mobile)
+      a
+      span
+      strong
+        font-size 8px
+      
+
+.withIcon
+  .middleItem
+    > span
+      padding-right 3px
+    +above($desktop)
+      padding-left 10px
+
+.countryFlag
+  width 26px
+  margin-right 8px
+
+.seeOptions
+  padding-left 5px
+  > span
+    cursor pointer
+    text-decoration underline
+    padding-left 6px

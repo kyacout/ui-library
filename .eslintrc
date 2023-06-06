@@ -1,0 +1,242 @@
+{
+  "env": {
+    "browser": false,
+    "commonjs": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-typescript"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "simple-import-sort",
+    "sort-destructure-keys"
+  ],
+  "rules": {
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "default": {
+          // Copied from https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md#default-configuration
+          "memberTypes": [
+            // Index signature
+            "signature",
+
+            // Fields
+            "public-static-field",
+            "protected-static-field",
+            "private-static-field",
+
+            "public-decorated-field",
+            "protected-decorated-field",
+            "private-decorated-field",
+
+            "public-instance-field",
+            "protected-instance-field",
+            "private-instance-field",
+
+            "public-abstract-field",
+            "protected-abstract-field",
+            "private-abstract-field",
+
+            "public-field",
+            "protected-field",
+            "private-field",
+
+            "static-field",
+            "instance-field",
+            "abstract-field",
+
+            "decorated-field",
+
+            "field",
+
+            // Constructors
+            "public-constructor",
+            "protected-constructor",
+            "private-constructor",
+
+            "constructor",
+
+            // Methods
+            "public-static-method",
+            "protected-static-method",
+            "private-static-method",
+
+            "public-decorated-method",
+            "protected-decorated-method",
+            "private-decorated-method",
+
+            "public-instance-method",
+            "protected-instance-method",
+            "private-instance-method",
+
+            "public-abstract-method",
+            "protected-abstract-method",
+            "private-abstract-method",
+
+            "public-method",
+            "protected-method",
+            "private-method",
+
+            "static-method",
+            "instance-method",
+            "abstract-method",
+
+            "decorated-method",
+
+            "method"
+          ],
+          "order": "alphabetically"
+        }
+      }
+    ],
+    "@typescript-eslint/semi": [
+      "error",
+      "never"
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "class-methods-use-this": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "curly": [
+      "error",
+      "all"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "import/no-default-export": "off",
+    "import/order": "off",
+    "import/prefer-default-export": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 100,
+        "ignoreUrls": true
+      }
+    ],
+    "no-console": "off",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "no-useless-return": "off",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "reservedFirst": [
+          "key"
+        ]
+      }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "simple-import-sort/sort": [
+      "error",
+      {
+        "groups": [
+          // Side effect imports.
+          [
+            "^\\u0000"
+          ],
+          // Packages.
+          [
+            // Things that start with a lowercase letter (or digit or underscore), or `@` followed by a letter.
+            "^@?[a-z0–9_]"
+          ],
+          // Internal packages.
+          [
+            // Anything that does not start with a dot.
+            "^[^.]"
+          ],
+          // Relative imports.
+          [
+            // Anything that starts with a dot.
+            "^\\."
+          ]
+        ]
+      }
+    ],
+    "sort-destructure-keys/sort-destructure-keys": 2,
+    "sort-imports": "off",
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "natural": false,
+        "minKeys": 2
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "eslint-import-resolver-custom-alias": {
+        "alias": {
+          "@Assets": "src/Assets",
+          "@Components": "src/Components",
+          "@Events": "src/Events",
+          "@Globals": "src/Globals",
+          "@Layouts": "src/Layouts",
+          "@Protos": "generated/protos",
+          "@Server": "server"
+        }
+      }
+    }
+  }
+}

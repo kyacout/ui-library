@@ -1,0 +1,17 @@
+.header
+  position relative
+  z-index $z_header
+  width 100%
+  background-color #fff
+  &.isFloating
+    position fixed
+    top -200px
+    left 0
+    box-shadow 0 2px 5px rgba(0,0,0,.2)
+  &.isFloatingVisible
+    top 0px
+
+.mobileSpacing
+  display none
+  &.show
+    display block

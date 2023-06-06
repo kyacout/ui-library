@@ -1,0 +1,49 @@
+.TitleContainer
+  border-bottom solid 1px $color_grey_lighter
+  padding-bottom 10px
+
+.Subtitle
+  color $color_grey
+
+.ContactArea
+  display flex
+  justify-content space-between
+  margin-top 20px
+
+.ContactForm
+  flex 1
+  max-width calc(50% - 15px)
+  margin-right 15px
+  position relative
+  +below($tablet)
+    max-width 100%
+    margin-right 0
+  .ButtonContainer
+    width 260px
+    > div
+      width 100%
+      margin-bottom 0
+
+    +below($phablet)
+      width 100%
+.Link
+  display block
+  &:hover
+    text-decoration underline
+
+.PossibleAnswers
+  flex 1
+  margin-left 15px
+  .TextArea
+    background-color $color_grey_lightest
+    padding 20px
+
+    .Title
+      font-size 1.125rem
+      font-weight 700
+  +below($tablet)
+    display none
+
+.SendUsEmailAt
+  margin-top 10px
+  link-styling-inverted()

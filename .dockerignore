@@ -1,0 +1,17 @@
+**
+!generated
+!public
+!server
+!src
+!types
+!next-env.d.ts
+!next.config.js
+!package.json
+!package-lock.json
+!*config.json
+!*config.server.json
+!*config.server.prod.json
+!.env
+!hack/update-translations.sh
+!hack/upload-static-content.sh
+public/static/locales/**/*.json

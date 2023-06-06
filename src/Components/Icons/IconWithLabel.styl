@@ -1,0 +1,20 @@
+.root
+  flex-center-children-column()
+
+.text
+  display block
+  margin-top 1px
+  font-size 0.665rem
+  white-space nowrap
+
+.smallTextBelowPhablet
+  +below($phablet)
+    .text
+      padding-top 2px
+      font-size 0.5rem
+
+.smallTextBelowPhone
+  +below($mobile)
+    .text
+      padding-top 2px
+      font-size 0.5rem

@@ -1,0 +1,118 @@
+.FooterOuter
+  section-outer()
+  flex-direction column
+  align-items center
+  margin-top 30px
+  padding-top 40px
+  padding-bottom 30px
+  background-color $color_grey_lightest
+  border-top 1px solid #ccc
+  +below($tablet)
+    padding-left 10px
+    padding-right 10px
+
+.FooterContainer
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  margin 0 auto
+  max-width 1200px
+  .Element
+    flex-wrap wrap
+    width calc(33.33% - 20px)
+    margin-bottom 20px
+    &.Top
+      border-bottom 1px solid $color_grey
+      +below($desktop)
+        border none
+    +between($tablet, $desktop)
+      width calc(50% - 30px)
+      padding 0 0px 15px
+      &.Payment
+        order 0
+      &.Contact
+        order 2
+      &.TrustPilot
+        order 1
+      &.CustomerSupport
+        order 4
+      &.Newsletter
+        order 3
+      &.Story
+        order 5
+    +below($tablet)
+      display flex
+      width calc(100% - 30px)
+      margin 10px 0
+      &.Payment
+        order 0
+      &.Contact
+        order 1
+      &.TrustPilot
+        order 5
+        padding-top 15px
+        padding-bottom 15px
+        border-top 1px solid $color_grey_lighter
+        border-bottom 1px solid $color_grey_lighter
+      &.CustomerSupport
+        order 2
+      &.Newsletter
+        order 3
+      &.Story
+        order 4
+    +below($phablet)
+      flex 0 0 calc(100%)
+
+.SectionTitle
+  width 100%
+  padding-bottom 15px
+  font-weight 700
+  font-size 1.125rem
+  text-transform uppercase
+
+.Text
+  padding-bottom 10px
+
+.ContactContainer
+  display flex
+  flex-wrap wrap
+  .Row
+    width 100%
+    display flex
+    justify-content flex-start
+    margin-bottom 20px
+    height 24px
+    .ItemText
+      margin-left 10px
+
+.Link
+  a
+    display block
+    &:hover
+      text-decoration underline
+
+.CustomerSupportItem
+  a
+    padding 5px 0
+
+.NewsletterItem
+  padding 2.5px 0
+  a
+    text-decoration underline
+
+.Story
+  .Text
+    a
+      color $color_primary
+      text-decoration underline
+      &:hover
+        text-decoration none
+
+.Copyright
+  text-align center
+  font-size 0.75rem
+  width 100%
+  margin 10px auto 0px
+  padding 0 20px
+  +below($phablet)
+    margin-top 30px

@@ -1,0 +1,33 @@
+// Page breakpoints - device lowest value
+$uiLibrary_max = 1200px
+$max_width = $uiLibrary_max
+$huge = 1600px
+$wide = 1200px
+$desktop = 1024px
+$tablet = 768px
+$phablet = 480px
+$mobile = 340px // Used in specific cases and not apart of general rupture setup
+$small-mobile = 0px
+
+
+// Special threshold used on PP and uiLibrary Gallery
+$mobileStyleThreshold = 900px
+
+// Rupture setup
+rupture.scale =  $small-mobile $mobile $phablet $tablet $desktop $wide $huge
+rupture.scale-names = 'small-mobile' 'mobile' 'phablet' 'tablet' 'desktop' 'wide' 'huge'
+
+rupture.anti-overlap = -1px
+
+rupture.hd-cutoff = $wide
+rupture.desktop-cutoff = $desktop
+rupture.tablet-cutoff = $tablet
+rupture.mobile-cutoff = $mobile
+
+// Write to the DOM current screen size
+page-breakpoint($size)
+  &:after
+    content $size
+    display none
+    +retina()
+      content $size + ',2x'

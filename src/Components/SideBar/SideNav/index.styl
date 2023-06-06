@@ -1,0 +1,77 @@
+$main_nav_animation_time = 0.05s
+$menu_open_close_time = 0.05s
+
+.SideNavWrapper
+  margin-bottom 30px
+
+.MainSideNav
+  margin-bottom 1px
+  padding 2.5px 0
+
+.SideNavLvl1
+  display flex
+  align-items stretch
+  position relative
+  cursor pointer
+  transition all $main_nav_animation_time ease-out
+  *
+    transition all $main_nav_animation_time ease-out
+  .IconWrap
+    flex-shrink 0
+    flex-center-children()
+    padding 0 3px 0 4px
+    .IconWrapInner
+      .Active &
+        transform rotateZ(90deg)
+    svg
+      box(100%)
+      padding 5px
+      fill $color_grey_dark
+    &:hover
+      +above($wide)
+        .IconWrapInner
+          transform rotateZ(90deg)
+          .NoLvl2 &
+            transform none
+  .CategoryLink
+    flex-grow 2
+    display flex
+    align-items center
+    font-size 1.125rem
+    padding-right: 10px
+
+  .Active &
+    background-color #f9f9f9
+    .IconWrap
+      svg
+        padding 4px
+    .CategoryLink
+      padding-left 5px
+      padding-right: 5px
+  &:hover
+    +above($wide)
+      background-color #f9f9f9
+      .IconWrap
+        svg
+          padding 4px
+        .NoLvl2 &
+          svg
+            opacity: 0.25
+      .CategoryLink
+        padding-left 5px
+        padding-right: 5px
+
+.SideNavLvl2
+  border-left 1px solid $color_primary
+  padding 0 10px
+  height 0
+  overflow hidden
+  margin-left 27px
+  transition all $menu_open_close_time ease
+  a
+    display block
+    padding 3.5px 0
+    line-height 1.25
+    &:hover,
+    &.Active
+      text-decoration underline

@@ -1,0 +1,20 @@
+section-outer()
+  width 100%
+  max-width 100%
+  display flex
+  justify-content center
+  padding-left $padding_desktop
+  padding-right $padding_desktop
+  +at('tablet')
+    padding-left $padding_tablet
+    padding-right $padding_tablet
+  +at('phablet')
+    padding-left $padding_phablet
+    padding-right $padding_phablet
+  +at('mobile')
+    padding-left $padding_mobile
+    padding-right $padding_mobile
+
+section-inner()
+  width 100%
+  max-width: $max_width

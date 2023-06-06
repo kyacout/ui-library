@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "baseUrl": ".",
+    "paths": {
+      "@Assets/*": ["generated/Assets/*"],
+      "@Components/*": ["src/Components/*"],
+      "@Events/*": ["src/Events/*"],
+      "@Globals/*": ["src/Globals/*"],
+      "@Layouts/*": ["src/Layouts/*"],
+      "@Protos/*": ["generated/protos/*"],
+      "@Server/*": ["server/*"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

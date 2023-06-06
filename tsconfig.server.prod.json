@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.server.json",
+  "compilerOptions": {
+    "paths": {
+      "@Assets/*": ["generated/Assets/*"],
+      "@Components/*": ["dist/src/Components/*"],
+      "@Events/*": ["dist/src/Events/*"],
+      "@Globals/*": ["dist/src/Globals/*"],
+      "@Layouts/*": ["dist/src/Layouts/*"],
+      "@Protos/*": ["generated/protos/*"],
+      "@Server/*": ["dist/server/*"]
+    },
+  },
+  "include": [
+    "dist/**"
+  ]
+}

@@ -1,0 +1,7 @@
+export * from './BurgerMenuIcon'
+export * from './CategoryIcon'
+export * from './IconWithLabel'
+export * from './InfoIcon'
+export * from './SVGIcon'
+export * from './TrustIcon'
+export * from './YOLOFlagIcon'

@@ -1,0 +1,37 @@
+.root
+  overflow auto
+  display flex
+  flex-wrap wrap
+  a
+    width calc((100% - 40px) / 3)
+    margin-right 20px
+    background-color $color_grey_lightest
+    padding 60px 10px
+    margin-bottom 20px
+    flex-center-children-column()
+    text-align center
+    +above($tablet)
+      &:nth-child(3n+3)
+        margin-right 0
+    +below($tablet)
+      width calc((100% - 15px) / 2)
+      margin-right 15px
+      margin-bottom 15px
+      padding 30px 10px
+      &:nth-child(2n+2)
+        margin-right 0
+    +below($phablet)
+      width calc((100% - 5px) / 2)
+      margin-right 5px
+      margin-bottom 5px
+    &:hover
+      background-color darken($color_grey_lightest, 10%)
+  .right
+    margin-right 0
+  .iconWrap
+    box(60px)
+    margin-bottom 10px
+    svg
+      fill $color_primary
+    +below($phablet)
+      box(40px)

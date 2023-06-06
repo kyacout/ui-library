@@ -1,0 +1,21 @@
+images:
+- eu.gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA
+
+secrets:
+- kmsKeyName: projects/cloud-261114/locations/global/keyRings/frontend/cryptoKeys/sentry
+  secretEnv:
+    SENTRY_AUTH_TOKEN: 'CiQAfV5pDNa8pj0NTBAXoFnX2H24lQZ6djKTvV7F7J0G6TqPDJ0SaQCjPqzMBvSXhi6/sgUiRCW0zKGfmsjDUhAitj1PzuPQ4A3whhKsYJzwMZQ5m1jKYwHat+JsPH+smLTIQX4lFsRos5kwDU+pJ1L4plZfwV6gqo5H4XnaI8MDyjXLp5Pq8gQEXNjvav/VpQ=='
+
+steps:
+- name: gcr.io/cloud-builders/docker
+  args:
+  - build
+  - --network
+  - cloudbuild
+  - --build-arg
+  - SENTRY_AUTH_TOKEN
+  - -t
+  - eu.gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA
+  - .
+  secretEnv:
+  - SENTRY_AUTH_TOKEN

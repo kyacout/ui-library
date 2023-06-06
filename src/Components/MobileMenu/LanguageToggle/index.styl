@@ -1,0 +1,28 @@
+.LanguageToggle
+  display flex
+  align-items center
+  background-color $color_grey_lightest
+  border-bottom 1px solid #ddd
+  padding 20px 20px 20px
+
+.ToggleText
+  margin-right 10px
+
+.Options
+  display flex
+  a
+    padding 2px 5px
+    background-color $color_grey
+    color #fff
+    opacity: 0.5
+    cursor pointer
+    &:first-child
+      border-right none
+    &:hover
+      darken($color_grey, 30%)
+    &.IsActive
+      background-color $color_grey_dark
+      color #fff
+      opacity 1
+    &:hover
+      opacity 0.75

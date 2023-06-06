@@ -1,0 +1,43 @@
+.MegaMenuSingleCategory
+  section-inner()
+  padding 15px 35px
+  display none
+  background-color #fff
+  border 1px solid darken($color_grey_lightest, 5%)
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,.05)
+  &.IsActive
+    display flex
+    justify-content space-between
+
+.LeftSide
+  margin-right 20px
+  padding-top 10px
+
+.CategoriesWrap
+  display flex
+
+.CategoryColumn
+  width 200px
+  padding-right 20px
+
+.CategoryItemsWrap
+  margin-bottom 20px
+  &:last-child
+    margin-bottom 0
+
+.CategoryItem
+  display flex
+  align-items center
+  padding-bottom 4px
+  text-transform uppercase
+  // font-weight bold
+  &:hover
+    text-decoration underline
+
+.SubCategoryItem
+  display block
+  font-size 0.875rem
+  color $color_grey
+  padding 3.5px 0px
+  &:hover
+    text-decoration underline

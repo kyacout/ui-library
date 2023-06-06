@@ -1,0 +1,292 @@
+.root
+  +below($desktop)
+    padding 20px 20px 100px
+    height calc(100% - 60px)
+    overflow auto
+    smooth-scroll()
+    .Title
+      display block
+      font-size 0.75rem
+      text-transform uppercase
+      margin-bottom 10px
+    +below($phablet)
+      padding 10px 20px 100px
+
+    .SearchResultsCategories
+      margin-bottom 20px
+
+    .SearchResultsCategoriesItem
+      display flex
+      align-items center
+      padding 8px 0px
+      cursor pointer
+      .arrowRightThinIconWrapper
+        box(16px)
+        flex-center-children()
+        flex-shrink 0
+        margin-right 8px
+        transform rotateZ(-135deg)
+        svg
+          fill $color_grey
+      .searchIconWrapper
+        box(16px)
+        flex-center-children()
+        flex-shrink 0
+        margin-right 8px
+        svg
+          fill $color_grey
+      .searchAllArrowRightThinIconWrapper
+        flex-center-children()
+        margin 0 6px
+        svg
+          fill $color_grey
+      .SearchAll
+        color $color_grey
+      .TextWrapper
+        flex-grow 2
+        .InnerText
+          font-size 0
+          span
+            display inline
+          .DivideIcon
+            flex-center-children()
+            display inline-flex
+            margin 0 5px
+            svg
+              fill $color_grey
+      span,
+      b,
+      em
+        font-size 1rem
+        font-style normal
+      em
+        background-color transparent
+        font-weight bold
+
+    .BrandAndCategoryWrapper
+      display flex
+      flex-direction column-reverse
+
+    .Brands,
+    .Products
+      margin-bottom 20px
+      .Title
+        display block
+        width 100%
+        padding-bottom 4px
+        font-size 0.75rem
+        font-weight bold
+        text-transform uppercase
+        border-bottom 1px solid $color_grey
+      .NothingToShowText
+        color $color_grey
+        font-size 0.75rem
+
+    .SearchResultsProductItem
+      display flex
+      margin-bottom 10px
+      cursor pointer
+      padding-right 10px
+      .ImgWrap
+        position relative
+        flex-shrink 0
+        box(50px)
+        margin-right 10px
+        default-product-grey-overlay()
+      .InfoWrap
+        display flex
+        align-items center
+        flex-grow 2
+        span
+          line-height 1.2
+        em
+          background-color transparent
+          font-weight bold
+          font-style normal
+      .PriceWrap
+        display flex
+        flex-direction column
+        align-items flex-end
+        justify-content center
+        flex-shrink 0
+        padding-left 20px
+        span
+          line-height 1.2
+        .BeforePrice
+          font-weight bold
+          text-decoration line-through
+        .DiscountPrice
+          font-weight bold
+          color $color_discount_bg
+        .NormalPrice
+          font-weight bold
+
+    .SearchResultsBrandItem
+      display flex
+      align-items center
+      padding 8px 0px
+      cursor pointer
+      .ArrowIcon
+        flex-center-children()
+        flex-shrink 0
+        margin-right 8px
+        transform rotateZ(-135deg)
+        svg
+          fill $color_grey
+      em
+        background-color transparent
+        font-weight bold
+        font-style normal
+  +above($desktop)
+    section-inner()
+    display flex
+    min-height 260px
+    padding 15px 20px 15px
+    background-color #fff
+    border 1px solid darken($color_grey_lightest, 5%)
+    border-top none
+    box-shadow: 0 10px 15px 0 rgba(0,0,0,.05)
+
+    .SearchResultsCategories
+      width 60%
+      flex-shrink 0
+      +below($wide)
+        width 50%
+      .SearchResultsCategoriesItem
+        display flex
+        align-items center
+        padding 8px 10px
+        cursor pointer
+        .arrowRightThinIconWrapper
+          box(16px)
+          flex-center-children()
+          flex-shrink 0
+          margin-right 8px
+          transform rotateZ(-135deg)
+          svg
+            fill $color_grey
+        .searchAllArrowRightThinIconWrapper
+          box(12px)
+          flex-center-children()
+          margin 0 6px
+          svg
+            fill $color_grey
+        .searchIconWrapper
+          box(16px)
+          flex-center-children()
+          flex-shrink 0
+          margin-right 8px
+          svg
+            fill $color_grey
+        .SearchAll
+          color $color_grey
+        .TextWrapper
+          flex-grow 2
+          .InnerText
+            font-size 0
+            span
+              display inline
+            .DivideIcon
+              flex-center-children()
+              display inline-flex
+              margin 0 5px
+              svg
+                fill $color_grey
+        span,
+        b,
+        em
+          font-size 1rem
+          font-style normal
+        em
+          background-color transparent
+          font-weight bold
+        &:hover
+          background-color $color_grey_lightest
+        &.FreeText
+          .SVGIconWrapper
+            transform rotateZ(0deg)
+
+    .BrandAndCategoryWrapper
+      margin-left 20px
+      width calc(40% - 20px)
+      +below($wide)
+        width calc(50% - 20px)
+      .Title
+        display block
+        width 100%
+        margin 10px 10px 10px 0
+        padding-bottom 4px
+        font-size 0.75rem
+        font-weight bold
+        text-transform uppercase
+        border-bottom 1px solid $color_grey
+      .NothingToShowText
+        color $color_grey
+        font-size 0.75rem
+      .Brands
+        flex-grow 2
+        max-width 100%
+        margin-bottom 20px
+
+    .SearchResultsBrandItem
+      display inline-block
+      padding 5px 5px 4px
+      border 1px solid $color_grey_light
+      margin-right 5px
+      margin-bottom 5px
+      cursor pointer
+      .ArrowIcon
+        display none
+      em
+        background-color transparent
+        font-weight bold
+        font-style normal
+      &:hover
+        background-color $color_grey_lightest
+        border-color $color_grey
+
+    .Products
+      flex-grow 2
+      max-width 100%
+
+    .SearchResultsProductItem
+      display flex
+      margin-bottom 5px
+      cursor pointer
+      padding-right 10px
+      max-width 100%
+      .ImgWrap
+        position relative
+        flex-shrink 0
+        box(45px)
+        margin-right 10px
+        default-product-grey-overlay()
+      .InfoWrap
+        display flex
+        align-items center
+        flex-grow 2
+        span
+          line-height 1.2
+        em
+          background-color transparent
+          font-weight bold
+          font-style normal
+      .PriceWrap
+        display flex
+        flex-direction column
+        align-items flex-end
+        justify-content center
+        flex-shrink 0
+        padding-left 20px
+        span
+          line-height 1.2
+        .BeforePrice
+          font-weight bold
+          text-decoration line-through
+        .DiscountPrice
+          font-weight bold
+          color $color_discount_bg
+        .NormalPrice
+          font-weight bold
+      &:hover
+        background-color $color_grey_lightest

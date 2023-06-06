@@ -1,0 +1,24 @@
+.Progress
+  &.ProgressColorGrey
+    border-left-color $color_grey
+    border-right-color $color_grey
+  &.ProgressColorPrimary
+    border-left-color $color_primary
+    border-right-color $color_primary
+  &.ProgressColorWhite
+    border-left-color #fff
+    border-right-color #fff
+
+.ProgressCenter
+  &.ProgressSizeSmall
+    top calc(50% - 13px)
+    left calc(50% - 13px)
+  &.ProgressSizeXSmall
+    top calc(50% - 9px)
+    left calc(50% - 9px)
+
+.ProgressSizeSmall
+  image-loading-circle(26px, 3px, #fff)
+
+.ProgressSizeXSmall
+  image-loading-circle(18px, 2px, #fff)

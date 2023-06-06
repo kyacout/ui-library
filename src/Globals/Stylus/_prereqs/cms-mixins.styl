@@ -1,0 +1,19 @@
+module-general-bottom-spacing()
+  margin-bottom 20px
+  +below($tablet)
+    margin-bottom 15px
+
+module-side-padding()
+  +below($desktop)
+    padding-left 20px
+    padding-right 20px
+  +below($tablet)
+    padding-left 10px
+    padding-right 10px
+  +below($phablet)
+    padding-left 5px
+    padding-right 5px
+mobile-padding()
+  +below($phablet)
+    padding-left 5px
+    padding-right 5px

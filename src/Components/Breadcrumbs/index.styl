@@ -1,0 +1,29 @@
+.BreadcrumbsWrap
+  display flex
+  flex-wrap wrap
+  align-items center
+  margin-bottom 20px
+  height 22px
+  &.HideSmallerScreens
+    +below($tablet)
+      display none
+  +below($tablet)
+    margin-bottom 10px
+  .Item
+    flex-wrap wrap
+    align-items center
+    a
+      flex-shrink 0
+      line-height 1.4
+      text-transform uppercase
+      color $color_grey
+      font-size 0.665rem
+    &:hover
+      text-decoration underline
+  .SplitLine
+    flex-shrink 0
+    line-height 1.4
+    text-transform uppercase
+    color $color_grey
+    padding 0 10px
+    font-size 0.665rem

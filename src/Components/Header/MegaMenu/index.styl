@@ -1,0 +1,16 @@
+$mega_menu_transition_time = 0.125s
+
+.MegaMenu
+  position absolute
+  z-index $z_desktop_header_nav_menu
+  top 100%
+  left 0
+  display flex
+  width calc(100vw - 75px)
+  max-width $uiLibrary_max
+  height 0px
+  margin-left 15px
+  overflow hidden
+  transition all $mega_menu_transition_time ease-out
+  &.IsActive
+    height 460px

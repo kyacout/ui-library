@@ -1,0 +1,39 @@
+.singlePostWrap
+  flex-center-children-column()
+  padding-top 20px
+  margin-bottom 50px
+  font-size 17px
+  h1
+    font-size 2.5rem
+    padding-bottom 0
+    margin-top 10px
+    line-height 1.4
+    +below($desktop)
+      font-size 2rem
+    +below($tablet)
+      margin-bottom 10px
+  h2
+    text-align center
+    margin-top 20px
+    font-size 2rem
+    line-height 1.2
+    +below($tablet)
+      font-size 1.75rem
+      margin-bottom 5px
+    +below($phablet)
+      font-size 1.5rem
+      margin-bottom 5px
+      padding-bottom 0
+  h3
+    text-align left
+    margin-top 10px
+    font-size 1.375rem
+    +below($phablet)
+      font-size 1.25rem
+  p
+    line-height 1.6
+    padding-bottom 15px
+    &:empty
+      display none
+    + ul
+      margin-top -10px

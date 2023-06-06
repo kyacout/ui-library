@@ -1,0 +1,33 @@
+.MegaMenuAllCategories
+  section-inner()
+  padding 20px 35px
+  display none
+  background-color #fff
+  border 1px solid darken($color_grey_lightest, 5%)
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,.05)
+  &.IsActive
+    display flex
+    justify-content space-between
+
+.LeftSide
+  margin-right 20px
+
+.Header
+  margin-bottom 15px
+  span
+    font-size 1.5rem
+    color $color_grey_light
+
+.CategoriesWrap
+  display flex
+
+.CategoryColumn
+  width 200px
+
+.CategoryItem
+  display flex
+  align-items center
+  padding-bottom 20px
+  padding-right 20px
+  &:hover
+    text-decoration underline

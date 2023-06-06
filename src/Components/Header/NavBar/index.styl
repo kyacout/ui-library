@@ -1,0 +1,53 @@
+.NavBar
+  position relative
+  section-outer()
+  flex-center-children-column()
+  z-index $z_desktop_header_nav_menu
+  border-top 1px solid darken($color_grey_lightest, 5%)
+  border-bottom 1px solid darken($color_grey_lightest, 5%)
+  background-color #fff
+  +below($desktop)
+    display none
+
+.NavBarInner
+  section-inner()
+  display flex
+  align-items stretch
+  justify-content space-between
+
+.CategoriesWrap
+  position relative
+  display flex
+  align-items center
+  margin-left -15px
+
+.OtherLinks
+  position relative
+  display flex
+  align-items stretch
+
+.OtherLinkItem
+  position relative
+  padding 16px 12px
+  font-size 0.75rem
+  color $color_grey_dark
+  text-transform uppercase
+  &:last-child
+    margin-right -12px
+  &:after
+    content ''
+    position absolute
+    bottom 0px
+    left 50%
+    width 0%
+    height 2px
+    margin-left 0%
+    background-color $color_grey_dark
+  &:hover
+    &:after
+      margin-left -25%
+      width 50%
+  +below($wide)
+    padding 16px 10px
+    &:last-child
+      margin-right -10px

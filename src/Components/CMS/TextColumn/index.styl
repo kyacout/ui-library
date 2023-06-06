@@ -1,0 +1,12 @@
+.root
+  width 100%
+  module-general-bottom-spacing()
+  module-side-padding()
+  mobile-padding()
+  link-styling()
+  max-width $module_width_small
+  &.twoColumns
+    column-count 2
+    column-gap 30px
+    +below($tablet)
+      column-count 1

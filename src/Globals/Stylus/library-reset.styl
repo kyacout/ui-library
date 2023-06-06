@@ -1,0 +1,225 @@
+// Own resets
+html
+  font-size $base_font_size; //THIS IS THE DEFAULT BASE OF REM CALCULATIONS
+  *
+  *:after
+  *:before
+    line-height $font_line_height_base
+    color $font_color_base
+    box-sizing border-box
+    font-weight: 400
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    &:focus
+      outline none
+
+html[dir="rtl"]
+  font-size: $base_font_rtl_size; //THIS IS THE DEFAULT BASE OF REM CALCULATIONS
+
+body
+  background-color #fff
+  width 100%
+  min-height 100vh
+  overflow-y scroll
+  *
+  *:after
+  *:before
+    font-family $font_family
+
+p
+  padding 0px 0px 10px 0px
+  margin 0
+
+a
+  text-decoration none
+  &:hover
+    text-decoration none
+
+b
+strong
+  font-weight bold
+
+h1
+  margin 0
+  padding 0px 0px 10px 0px
+  font-size 2rem
+  font-weight bold
+  letter-spacing 1px
+  text-transform uppercase
+  +below($phablet)
+    font-size 1.75rem
+    line-height 1.2
+
+h2
+  margin 0
+  padding 0px 0px 10px 0px
+  font-size 1.25rem
+  font-weight normal
+  letter-spacing 0.5px
+  text-transform uppercase
+
+h3
+  margin 0
+  padding 0px 0px 0px 0px
+  font-size 1rem
+  font-weight normal
+  text-transform uppercase
+
+h4
+h5
+h6
+  font-weight normal
+
+form
+  display block
+
+img
+  display block
+  width 100%
+  height initial
+  height auto
+
+svg
+  box(100%)
+
+ul
+  list-style none
+
+// Other resets found online
+html
+  text-size-adjust 100%
+
+body
+  text-align left
+  text-align initial
+
+*
+  padding 0
+  margin 0
+  outline 0
+
+body
+article
+aside
+details
+figcaption
+figure
+footer
+header
+main
+menu
+nav
+section
+summary
+  display block
+
+a
+  background-color transparent
+
+a:active
+a:hover
+  outline 0
+
+abbr[title]
+  border-bottom none
+  text-decoration underline
+  text-decoration underline dotted
+
+img
+  border 0
+
+svg
+  &:not(:root)
+    overflow hidden
+
+pre
+  overflow auto
+
+code
+kbd
+pre
+samp
+  font-family monospace, monospace
+  font-size 1rem
+
+button
+input
+optgroup
+select
+textarea
+  display block
+  font inherit
+  margin 0
+
+button
+  overflow visible
+  border-radius 0
+
+button
+select
+  text-transform none
+
+button
+html input[type="button"]
+input[type="reset"]
+input[type="submit"]
+  appearance button
+  cursor pointer
+
+button[disabled]
+html input[disabled]
+  cursor default
+
+button::-moz-focus-inner
+input::-moz-focus-inner
+  border 0
+  padding 0
+
+button:-moz-focusring
+input:-moz-focusring
+  outline 1px dotted ButtonText
+
+input
+  line-height normal
+
+input[type="checkbox"]
+input[type="radio"]
+  box-sizing border-box
+  padding 0
+
+input[type="number"]::-webkit-inner-spin-button
+input[type="number"]::-webkit-outer-spin-button
+  height auto
+
+input[type="search"]
+  appearance textfield
+
+input[type="search"]::-webkit-search-cancel-button
+input[type="search"]::-webkit-search-decoration
+  appearance none
+
+legend
+  border 0
+  padding 0
+
+textarea
+  overflow auto
+
+optgroup
+  font-weight bold
+
+// Page breakpoints
+body
+  +at('huge')
+    page-breakpoint('huge')
+  +at('wide')
+    page-breakpoint('wide')
+  +at('desktop')
+    page-breakpoint('desktop')
+  +at('tablet')
+    page-breakpoint('tablet')
+  +at('phablet')
+    page-breakpoint('phablet')
+  +at('mobile')
+    page-breakpoint('mobile')
+  +at('small-mobile')
+    page-breakpoint('small-mobile')

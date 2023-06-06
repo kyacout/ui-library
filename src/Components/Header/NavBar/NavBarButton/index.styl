@@ -1,0 +1,22 @@
+.NavBarButton
+  position relative
+  text-transform uppercase
+  padding 14px 15px 12px
+  cursor pointer
+  height 48px
+  &:after
+    content ''
+    position absolute
+    bottom 0px
+    left 50%
+    width 0%
+    height 2px
+    margin-left 0%
+    background-color $color_grey_dark
+  &:hover
+    &:after
+      margin-left -25%
+      width 50%
+  +below($wide)
+    padding 15px 11px 12px
+    font-size 0.875rem

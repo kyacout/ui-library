@@ -1,0 +1,131 @@
+// Base
+.FormElement
+  display block
+  margin-bottom 10px
+  .FormElementInner
+    position relative
+  label
+    position absolute
+    margin-left 12px
+    margin-top 10px
+    display block
+    color $color_grey
+    font-size 1.125rem
+    pointer-events none
+    +below($phablet)
+      font-size 1rem
+  input
+  textarea
+    width 100%
+    padding 0 11px
+    font-size 1.125rem
+    appearance none
+    border-radius 0
+  textarea
+    padding-top 9px
+    resize: vertical
+    min-height 100px
+  .ErrorMessage
+    color $color_error_message
+    font-size 0.875rem
+    padding-top 5px
+    margin-left 11px
+
+  .InputContainerWithAnimation
+    display flex
+    justify-content space-between
+    input
+    textarea
+      display block
+      padding 12px 11px 10px
+      font-size 1.125rem
+      width 100%
+      border 1px solid #ccc
+      appearance none
+      border-radius 0
+      outline none
+      background-color #fff
+    label
+      position absolute
+      margin-left 12px
+      margin-top 11px
+      display block
+      padding-bottom 3px
+      color $color_grey
+      transition all 0.15s ease
+      font-size 1.125rem
+      pointer-events none
+    &.FormActive
+      input
+      textarea
+        padding 19px 11px 3px !important
+      label
+        color $color_grey_light
+        margin-top 4px
+        font-size 0.75rem
+  .InputContainerWithoutAnimation
+    input
+    textarea
+      font-size 0.75rem
+      font-stretch 100%
+      border 1px solid #ccc
+      width 100%
+      height 30px
+      padding 11px 10px 9px
+    label
+      color $color_grey_light
+      margin-top 4px
+      font-size 0.75rem
+      pointer-events none
+    &.FormActive
+      label
+        display none
+
+contained(main-color, hover-color)
+  background-color main-color
+  border-color main-color
+  color white
+  &:hover
+    background-color hover-color
+    border-color hover-color
+
+outlined(main-color, hover-color)
+  background-color white
+  border-color main-color
+  color $color_primary
+  &:hover
+    border-color hover-color
+    background-color $color_grey_lightest
+    color $color_primary_hover
+
+.Button
+  width 100%
+  border-style solid
+  border-width 1px
+  padding 10px 20px
+  text-transform uppercase
+  text-align center
+  &.small
+    font-size 0.75rem
+  &.primary
+    &.contained
+      contained($color_primary, $color_primary_hover)
+    &.outlined
+      outlined($color_primary, $color_primary_hover)
+  &.secondary
+    &.contained
+      contained(#9e9e9e, #767676)
+    &.outlined
+      outlined(#9e9e9e, #767676)
+  &.loading
+    position relative
+    overflow hidden
+    color transparent !important
+    span
+      opacity 0
+      transform translateY(-100px)
+    &:after
+      image-loading-circle(26px, 3px, #fff)
+      position absolute
+      top calc(50% - 13px)
+      left calc(50% - 13px)

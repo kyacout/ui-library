@@ -1,0 +1,15 @@
+.MainContainer
+  section-outer()
+  box-sizing border-box
+  padding-top 20px
+  min-height: 700px
+  +below($tablet)
+    padding-top 15px
+  +below($phablet)
+    padding-top 10px
+    min-height: 300px
+
+.ChildrenContainer
+  section-inner()
+  display flex
+  position relative

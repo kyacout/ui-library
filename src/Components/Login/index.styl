@@ -1,0 +1,59 @@
+.Overlay
+  width 100%
+  max-width 360px
+  margin 0 auto
+  flex-center-children-column()
+  .SmallLoadingWrap
+    loading-wrap()
+  .Header
+    flex-center-children-column()
+    .IconWrap
+      margin-bottom 5px
+      box(50px)
+      svg
+        fill $color_primary
+      +below($phablet)
+        display none
+    span
+      width 100%
+      margin-bottom 10px
+      text-align center
+      font-size: 1.5rem
+  .Banner
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    &.Error
+      color $color_error_message
+      border: 1px solid $color_error_message;
+      background-color: $color_grey_lightestest;
+    &.Success
+      color: #4b8e6b;
+      border: 1px solid #4b8e6b;
+  .Form
+    width 100%
+    .ButtonsWrap
+      margin-top 25px
+      width 100%
+      .ResetPassword
+        display block
+        color $color_primary
+        font-size 0.875rem
+        cursor pointer
+        &:hover
+          text-decoration underline
+      .CreateNewAccount
+        display block
+        text-align center
+        padding 11px 20px 10px
+        background-color #fff
+        border 1px solid $color_primary
+        color $color_primary
+        margin-top 20px
+        text-transform uppercase
+        width 100%
+        &:hover
+          background-color $color_grey_lightest
+          border-color darken($color_primary, 30%)
+          color darken($color_primary, 30%)

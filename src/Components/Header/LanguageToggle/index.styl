@@ -1,0 +1,29 @@
+.LanguageToggle
+  position relative
+  flex-center-children-column()
+  height 37px
+  padding 1px 20px 0px 15px
+  margin-top 7px
+  transform translateY(1px)
+
+.ButtonsWrap
+  display flex
+  margin-bottom 1px
+  a
+    text-transform uppercase
+    padding 2px 5px
+    background-color $color_grey
+    color #fff
+    opacity: 0.5
+    font-size 0.75rem
+    cursor pointer
+    &:hover
+      background-color darken($color_grey, 30%)
+      opacity 0.75
+    &.IsActive
+      background-color $color_grey_dark
+      color #fff
+      opacity 1
+
+.ToggleText
+  font-size 0.665rem

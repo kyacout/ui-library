@@ -1,0 +1,33 @@
+.root
+  position relative
+  margin-bottom 20px
+  input
+    border 2px solid #2c9169
+    padding 11px 10px 9px 10px
+    width 100%
+  button
+    position absolute
+    top 0
+    right 10px
+    width 24px
+    height 100%
+    background none
+    border 0
+  .searchIcon
+    box(24px)
+    svg
+      fill $color_grey_dark
+  .suggestionsList
+    position absolute
+    top 44px
+    left 0
+    width 100%
+    background-color $color_grey_lightest
+    border 1px solid $color_grey_light
+    box-shadow 1px 2px 3px rgba(0,0,0,0.3)
+    a
+      display block
+      padding 15px
+      border-bottom 1px solid $color_grey_light
+      &:hover
+        background-color darken($color_grey_lightest, 10%)

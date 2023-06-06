@@ -1,0 +1,63 @@
+.CookieBar
+  section-outer()
+  background-color $color_grey_lightest
+  position relative
+  z-index $z_header
+  +below($desktop)
+    position fixed
+    bottom 0
+    left 0
+    z-index $z_cookie_bar
+
+.CookieBarInner
+  section-inner()
+  flex-center-children-column()
+  position relative
+  .CloseIcon
+    flex-center-children()
+    position absolute
+    top 0
+    right 0
+    box(40px, 100%)
+    padding 13px
+    cursor pointer
+    svg
+      fill $color_grey
+    &:hover
+      svg
+        fill $color_grey_dark
+  +below($desktop)
+    padding 0px 40px 0px 10px
+    .CloseIcon
+      padding 13px
+  .MessageWrap
+    display flex
+    align-items center
+    justify-content center
+    max-width 700px
+    min-height 60px
+    padding 15px 0px
+    img
+      width 25px
+      height 25px
+      margin-right 10px
+      opacity 0.3
+    .TextWrap
+      line-height 1
+      span,
+      a
+        font-size 0.75rem
+        line-height 1
+        color $color_grey
+      .CookieText
+        padding-right 6px
+        a
+          text-decoration underline
+      .AcceptText
+        text-decoration underline
+        cursor pointer
+        white-space nowrap
+    +below($desktop)
+      span,
+      strong
+        line-height 1.5

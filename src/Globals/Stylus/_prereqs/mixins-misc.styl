@@ -1,0 +1,72 @@
+link-styling()
+  a
+    color $color_primary
+    &:hover
+      text-decoration underline
+
+link-styling-inverted()
+  a
+    color $color_primary
+    text-decoration underline
+    &:hover
+      text-decoration none
+
+box(width, height = width)
+  width width
+  height height
+
+circle(size)
+  box(size)
+  border-radius: 50%
+
+truncate()
+  white-space nowrap
+  overflow hidden
+  text-overflow ellipsis
+
+flex-center-children()
+  display flex
+  justify-content center
+  align-items center
+
+flex-center-children-column()
+  display flex
+  flex-direction column
+  align-items center
+
+backdrop()
+  position fixed
+  top 0
+  left 0
+  z-index $z_backdrop
+  width 100%
+  height 100vh
+  background-color rgba(0, 0, 0, 0.25)
+
+@keyframes loading
+  to
+    transform rotateZ(360deg)
+
+image-loading-circle($size = 50px, $border_width = 3px, $color = #ccc)
+  content ''
+  display block
+  circle($size)
+  border $border_width solid transparent
+  border-left-color $color
+  border-right-color $color
+  animation: loading infinite .75s linear
+
+loading-wrap()
+  position absolute
+  top 0
+  left 0
+  z-index 100
+  box(100%)
+  background-color rgba(#fff, 0.85)
+  flex-center-children()
+  display none
+  &.Active
+    display flex
+  &:after
+    image-loading-circle(60px, 3px)
+    margin-top -10px

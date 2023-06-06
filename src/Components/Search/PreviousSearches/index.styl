@@ -1,0 +1,111 @@
+.root
+  +below($desktop)
+    padding 20px 10px 100px 20px
+    height calc(100% - 60px)
+    overflow auto
+    smooth-scroll()
+    .Title
+      display block
+      font-size 0.75rem
+      text-transform uppercase
+      margin-bottom 5px
+    +below($phablet)
+      padding 20px 5px 100px 15px
+    .PreviousSearchesItem
+      position relative
+      display flex
+      align-items center
+      padding 8px 50px 8px 0px
+      min-height 40px
+      cursor pointer
+      .ClockIcon
+        flex-center-children()
+        flex-shrink 0
+        margin-right 8px
+        svg
+          fill $color_grey
+      .TextWrap
+        flex-grow 2
+        .InnerText
+          font-size 0
+          span
+            display inline
+            font-size 1rem
+          .DivideIcon
+            flex-center-children()
+            display inline-flex
+            margin 0 5px
+            svg
+              fill $color_grey
+      .RemoveIcon
+        position absolute
+        top 0
+        right 0
+        box(40px)
+        flex-center-children()
+        flex-shrink 0
+        padding 14px
+        svg
+          box(12px)
+          fill $color_grey
+  +above($desktop)
+    section-inner()
+    min-height 260px
+    padding 20px
+    background-color #fff
+    border 1px solid darken($color_grey_lightest, 5%)
+    border-top none
+    box-shadow: 0 10px 15px 0 rgba(0,0,0,.05)
+    .Title
+      display block
+      margin 10px
+      padding-bottom 4px
+      max-width 60%
+      font-size 0.75rem
+      font-weight bold
+      text-transform uppercase
+      border-bottom 1px solid $color_grey
+    .PreviousSearchesItem
+      position relative
+      display flex
+      align-items center
+      max-width 60%
+      padding 8px 50px 8px 10px
+      min-height 40px
+      cursor pointer
+      .ClockIcon
+        flex-center-children()
+        flex-shrink 0
+        margin-right 8px
+        svg
+          fill $color_grey
+      .TextWrap
+        flex-grow 2
+        .InnerText
+          font-size 0
+          span
+            display inline
+            font-size 1rem
+          .DivideIcon
+            box(8px)
+            flex-center-children()
+            display inline-flex
+            margin 0 5px
+            svg
+              fill $color_grey
+      .RemoveIcon
+        position absolute
+        top 0
+        right 0
+        box(40px)
+        flex-center-children()
+        flex-shrink 0
+        padding 15px
+        display none
+        svg
+          box(10px)
+          fill $color_grey
+      &:hover
+        background-color $color_grey_lightest
+        .RemoveIcon
+          display flex

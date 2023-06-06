@@ -1,0 +1,46 @@
+.YoloEuTopBar
+  section-outer()
+  background-color $color_grey_lightest
+  .Inner
+    section-inner()
+    flex-center-children-column()
+    position relative
+    .MessageWrap
+      padding 10px 0px
+      display flex
+      align-items center
+      justify-content center
+      img
+        width 60px
+        margin-right 10px
+      span,
+      strong
+        max-width 500px
+        font-size 0.875rem
+        line-height 1.2
+      .ShippingOptions
+        padding-left 6px
+        cursor pointer
+        text-decoration underline
+      +below($desktop)
+        span,
+        strong
+          line-height 1.5
+
+    .CloseIcon
+      flex-center-children()
+      position absolute
+      top 0
+      right 0
+      box(40px, 100%)
+      padding 13px
+      cursor pointer
+      svg
+        fill $color_grey
+      &:hover
+        svg
+          fill $color_grey_dark
+    +below($desktop)
+      padding 0px 40px 0px 10px
+      .-s-close-icon
+        padding 13px

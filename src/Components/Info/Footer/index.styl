@@ -1,0 +1,24 @@
+.root
+  background-color $color_grey_lightest
+  padding 15px 30px
+  margin-bottom 20px
+  display flex
+  align-items center
+  justify-content space-between
+  +below($tablet)
+    padding-left 15px
+    flex-direction column
+    align-items flex-start
+  .item
+    flex-center-children()
+    max-width 350px
+    +below($tablet)
+      margin-bottom 10px
+      &.lastRow
+        margin-bottom 0
+    .iconWrap
+      box(20px)
+      margin-right 10px
+      flex-shrink 0
+      svg
+        fill $color_primary

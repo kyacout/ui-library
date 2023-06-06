@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@Assets/*": ["generated/Assets/*"],
+      "@Components/*": ["src/Components/*"],
+      "@Events/*": ["src/Events/*"],
+      "@Globals/*": ["src/Globals/*"],
+      "@Layouts/*": ["src/Layouts/*"],
+      "@Protos/*": ["generated/protos/*"],
+      "@Server/*": ["server/*"]
+    },
+    "typeRoots" : [
+      "./types",
+      "./node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.styl$"
+        }
+      }
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": [
+    ".next",
+    "dist",
+    "out",
+    "next.config.js"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.js",
+    "**/*.styl",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}
